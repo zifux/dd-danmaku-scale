@@ -509,11 +509,11 @@
                             fontSize: `${fontSize}px`,
                             color: `#${color}`,
                             textShadow:
-                                color === '00000' ? '-1px -1px #FFFFFF80, -1px 1px #FFFFFF80, 1px -1px #FFFFFF80, 1px 1px #FFFFFF80' : '-1px -1px #00000080, -1px 1px #00000080, 1px -1px #00000080, 1px 1px #00000080',
+                                color === '0000080' ? '-1px -1px #FFFFFF80, -1px 1px #FFFFFF80, 1px -1px #FFFFFF80, 1px 1px #FFFFFF80' : '-1px -1px #00000080, -1px 1px #00000080, 1px -1px #00000080, 1px 1px #00000080',
 
                             font: `${fontSize}px sans-serif`,
                             fillStyle: `#${color}`,
-                            strokeStyle: color === '000000' ? '#FFFFFF80' : '#00000080',
+                            strokeStyle: color === '00000080' ? '#FFFFFF80' : '#00000080',
                             lineWidth: 2.0,
                         },
                     };
