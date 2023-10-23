@@ -499,7 +499,8 @@
                     const mode = { 6: 'ltr', 1: 'rtl', 5: 'top', 4: 'bottom' }[values[1]];
                     if (!mode) return null;
                     //const fontSize = Number(values[2]) || 25
-                    const fontSize = Math.round((window.screen.height > window.screen.width ? window.screen.width : window.screen.height / 1080) * 23);
+
+                    const fontSize = Math.round((window.screen.height > window.screen.width ? window.screen.width : window.screen.height) * window.devicePixelRatio / 1080 * 22 );
                     const color = `000000${Number(values[2]).toString(16)}`.slice(-6) + '80';
                     return {
                         text: $comment.m,
