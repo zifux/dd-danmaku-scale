@@ -1,5 +1,5 @@
 # emby-danmaku
-
+## 修改 字改大了点,弹幕半透明
 ## Emby danmaku extension
 ![截图](https://raw.githubusercontent.com/RyoLee/emby-danmaku/res/S0.png)
 
