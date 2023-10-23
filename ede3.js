@@ -339,7 +339,7 @@
                 window.localStorage.setItem(_id_key, animaInfo.animes[selecAnime_id].animeId);
                 window.localStorage.setItem(_name_key, animaInfo.animes[selecAnime_id].animeTitle);
                 let episode_lists_str = ep2string(animaInfo.animes[selecAnime_id].episodes);
-                episode = prompt('确认集数:\n' + episode_lists_str, parseInt(episode));
+                episode = prompt('确认集数:\n' + episode_lists_str, episode === 'movie' ? 1 : parseInt(episode));
                 episode = parseInt(episode) - 1;
             } else {
                 selecAnime_id = parseInt(selecAnime_id) - 1;
@@ -510,7 +510,7 @@
                             fontSize: `${fontSize}px`,
                             color: `#${color}`,
                             textShadow:
-                                color === '0000080' ? '-1px -1px #FFFFFF80, -1px 1px #FFFFFF80, 1px -1px #FFFFFF80, 1px 1px #FFFFFF80' : '-1px -1px #00000080, -1px 1px #00000080, 1px -1px #00000080, 1px 1px #00000080',
+                                color === '0000080' ? '-1px -1px #FFFFFF40, -1px 1px #FFFFFF40, 1px -1px #FFFFFF40, 1px 1px #FFFFFF40' : '-1px -1px #00000040, -1px 1px #00000040, 1px -1px #00000040, 1px 1px #00000040',
 
                             font: `${fontSize}px sans-serif`,
                             fillStyle: `#${color}`,
