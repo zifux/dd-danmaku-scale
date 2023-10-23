@@ -510,7 +510,7 @@
                             fontSize: `${fontSize}px`,
                             color: `#${color}`,
                             textShadow:
-                                color === '0000080' ? '-1px -1px #FFFFFF80, -1px 1px #FFFFFF80, 1px -1px #FFFFFF80, 1px 1px #FFFFFF80' : '-1px -1px #00000080, -1px 1px #00000080, 1px -1px #00000080, 1px 1px #00000080',
+                                color === '0000080' ? '-1px -1px #FFFFFF40, -1px 1px #FFFFFF40, 1px -1px #FFFFFF40, 1px 1px #FFFFFF40' : '-1px -1px #00000040, -1px 1px #00000040, 1px -1px #00000040, 1px 1px #00000040',
 
                             font: `${fontSize}px sans-serif`,
                             fillStyle: `#${color}`,
