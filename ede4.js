@@ -305,9 +305,10 @@
             }
 
             let searchUrl = 'https://api.dandanplay.net/api/v2/search/episodes?anime=' + animeName + '&withRelated=true';
-            if (is_auto) {
-                searchUrl += '&episode=' + episode;
-            }
+            //不使用episode参数,在混合内容里找不到番剧
+            //if (is_auto) {
+            //    searchUrl += '&episode=' + episode;
+            //}
             let animaInfo = await fetch(searchUrl, {
                 method: 'GET',
                 headers: {
