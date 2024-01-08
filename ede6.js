@@ -641,6 +641,8 @@
 
 
     // 配置
+    // 使用代理绕过dandanplay对浏览器的CORS限制
+    const apiProxy = 'https://video.acgfun.fun:888';
     const check_interval = 1000; //不用那么频繁检测
     const chConverTtitle = ['当前状态: 未启用', '当前状态: 转换为简体', '当前状态: 转换为繁体'];
     // 0:当前状态关闭 1:当前状态打开
@@ -926,8 +928,8 @@
         if (!is_auto) {
             animeName = prompt('确认动画名:', animeName);
         }
-
-        let searchUrl = 'https://api.dandanplay.net/api/v2/search/episodes?anime=' + animeName + '&withRelated=true';
+        
+        let searchUrl = apiProxy + '/api/v2/search/episodes?anime=' + animeName + '&withRelated=true';
         //不使用episode参数,在混合内容里找不到番剧
         //if (is_auto) {
         //    searchUrl += '&episode=' + episode;
@@ -979,7 +981,7 @@
     }
 
     function getComments(episodeId) {
-        let url = 'https://api.9-ch.com/cors/https://api.dandanplay.net/api/v2/comment/' + episodeId + '?withRelated=true&chConvert=' + window.ede.chConvert;
+        let url = apiProxy+'/api/v2/comment/' + episodeId + '?withRelated=true&chConvert=' + window.ede.chConvert;
         return fetch(url, {
             method: 'GET',
             headers: {
@@ -1137,8 +1139,8 @@
                         color: `#${color}`,
                         font: `${fontSize}px sans-serif`,
                         fillStyle: `#${color}`,
-                        strokeStyle: '#808080',
-                        lineWidth: 2.0,
+                        strokeStyle: '#000000',
+                        lineWidth: 1.0,
                     },
                 };
             })
