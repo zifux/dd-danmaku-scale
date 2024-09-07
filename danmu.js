@@ -871,17 +871,12 @@
     }
 
     function getEmbyItemInfo() {
-        return window.require(['pluginManager']).then((items) => {
+        return window.require(["./modules/common/playback/playbackmanager.js"]).then((items) => {
             if (items) {
                 for (let i = 0; i < items.length; i++) {
-                    const item = items[i];
-                    if (item.pluginsList) {
-                        for (let j = 0; j < item.pluginsList.length; j++) {
-                            const plugin = item.pluginsList[j];
-                            if (plugin && plugin.id == 'htmlvideoplayer') {
-                                return plugin._currentPlayOptions ? plugin._currentPlayOptions.item : null;
-                            }
-                        }
+                    const plugin = items[i]?.default?._currentPlayer;
+                    if (plugin && plugin.id == 'htmlvideoplayer') {
+                        return plugin._currentPlayOptions ? plugin._currentPlayOptions.item : null;
                     }
                 }
             }
